@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanNationIdViewController" customModule="sathapana_referral_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="QKE-li-CeH" id="I3J-hp-gzu"/>
+                <outlet property="descriptionLabel" destination="Aev-gm-kAK" id="sDL-VO-6hf"/>
+                <outlet property="manualInputLabel" destination="7d6-jd-dne" id="MxO-E9-R2c"/>
+                <outlet property="mrzScannerView" destination="dUs-xn-tJQ" id="0jO-Pj-2cs"/>
+                <outlet property="takePhotoButton" destination="TMD-hW-nwZ" id="n6X-GN-CIT"/>
+                <outlet property="takePhotoCornorImageView" destination="wCV-zi-gjV" id="R4b-GM-HO2"/>
+                <outlet property="titleLabel" destination="XMz-J1-JAH" id="a8d-30-uis"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUs-xn-tJQ" userLabel="PreviewView" customClass="QKMRZScannerView" customModule="sathapana_referral_ios" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wId-VS-OB9" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-li-CeH">
+                            <rect key="frame" x="23" y="46" width="38" height="36"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="38" id="eaz-FP-kb9"/>
+                                <constraint firstAttribute="height" constant="36" id="hub-Df-MVd"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="arrow_left">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7h9-oW-Dgh">
+                            <rect key="frame" x="30" y="114" width="276" height="55.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Your Nation ID" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMz-J1-JAH">
+                                    <rect key="frame" x="0.0" y="0.0" width="248" height="31"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Align your national ID card with frame below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aev-gm-kAK">
+                                    <rect key="frame" x="0.0" y="39" width="276" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMD-hW-nwZ" customClass="CameraButton" customModule="sathapana_referral_ios" customModuleProvider="target">
+                            <rect key="frame" x="28" y="808" width="358" height="45"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="wtx-Bt-fZl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="15" minY="15" maxX="0.0" maxY="15"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isWhite" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="takePhotoDidTap" destination="-1" eventType="touchUpInside" id="Mgr-Ve-cJb"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manual Input in 30 seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d6-jd-dne">
+                            <rect key="frame" x="102" y="612.5" width="210" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_national_id" translatesAutoresizingMaskIntoConstraints="NO" id="wCV-zi-gjV">
+                            <rect key="frame" x="347.5" y="822.5" width="19.5" height="16"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="TMD-hW-nwZ" firstAttribute="trailing" secondItem="wCV-zi-gjV" secondAttribute="trailing" constant="19" id="J56-8D-dd8"/>
+                        <constraint firstItem="QKE-li-CeH" firstAttribute="top" secondItem="wId-VS-OB9" secondAttribute="top" constant="46" id="R4r-AO-Uec"/>
+                        <constraint firstItem="wCV-zi-gjV" firstAttribute="centerY" secondItem="TMD-hW-nwZ" secondAttribute="centerY" id="WMi-rV-fXA"/>
+                        <constraint firstItem="7h9-oW-Dgh" firstAttribute="top" secondItem="wId-VS-OB9" secondAttribute="top" constant="114" id="awO-Ao-eKB"/>
+                        <constraint firstItem="7d6-jd-dne" firstAttribute="centerY" secondItem="wId-VS-OB9" secondAttribute="centerY" multiplier="1.39" id="cPm-jY-5gO"/>
+                        <constraint firstItem="TMD-hW-nwZ" firstAttribute="leading" secondItem="wId-VS-OB9" secondAttribute="leading" constant="28" id="gcm-gi-yP0"/>
+                        <constraint firstItem="7d6-jd-dne" firstAttribute="centerX" secondItem="wId-VS-OB9" secondAttribute="centerX" id="kDC-tl-qQG"/>
+                        <constraint firstAttribute="bottom" secondItem="TMD-hW-nwZ" secondAttribute="bottom" constant="43" id="luh-6f-7bR"/>
+                        <constraint firstItem="7h9-oW-Dgh" firstAttribute="leading" secondItem="wId-VS-OB9" secondAttribute="leading" constant="30" id="otE-WA-CCR"/>
+                        <constraint firstItem="QKE-li-CeH" firstAttribute="leading" secondItem="wId-VS-OB9" secondAttribute="leading" constant="23" id="qNG-r6-0GO"/>
+                        <constraint firstAttribute="trailing" secondItem="TMD-hW-nwZ" secondAttribute="trailing" constant="28" id="qgt-gi-Kts"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wId-VS-OB9" secondAttribute="bottom" id="1Dq-NX-GYw"/>
+                <constraint firstItem="wId-VS-OB9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Kjy-4I-qPu"/>
+                <constraint firstItem="dUs-xn-tJQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LFa-KW-fck"/>
+                <constraint firstItem="dUs-xn-tJQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SYG-aR-vIy"/>
+                <constraint firstItem="wId-VS-OB9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Vd1-or-q29"/>
+                <constraint firstAttribute="bottom" secondItem="dUs-xn-tJQ" secondAttribute="bottom" id="enA-5A-KXX"/>
+                <constraint firstItem="wId-VS-OB9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sfk-5c-bnY"/>
+                <constraint firstItem="dUs-xn-tJQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="taj-wd-H1P"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="76.811594202898561" y="63.616071428571423"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="TMD-hW-nwZ">
+            <size key="intrinsicContentSize" width="30" height="29"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="arrow_left" width="9" height="16.5"/>
+        <image name="scan_national_id" width="19.5" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
